@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | Heal+</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        /* Header Section with Logo */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+            .header img.logo {
+                width: 120px;
+                height: auto;
+            }
+
+            .header nav {
+                display: flex;
+                gap: 20px;
+            }
+
+                .header nav a {
+                    text-decoration: none;
+                    color: #4e92fc;
+                    font-weight: 600;
+                    transition: color 0.3s ease-in-out;
+                }
+
+                    .header nav a:hover {
+                        color: #333;
+                    }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(45deg, #4e92fc, #6cd1e8);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #4e92fc;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+            .feature-item.feature-reverse {
+                flex-direction: row-reverse;
+            }
+
+        .feature-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+            .feature-text h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .feature-text p {
+                font-size: 1rem;
+                color: #555;
+            }
+
+        .feature-image {
+            flex: 1;
+        }
+
+            .feature-image img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+        /* Highlights Section */
+        .highlights {
+            background: #f4f8ff;
+            padding: 60px 0;
+        }
+
+        .highlight-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            flex: 1;
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .highlight-item img {
+                width: 60px;
+                margin-bottom: 20px;
+            }
+
+            .highlight-item h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+            .faq-section h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #4e92fc;
+                margin-bottom: 40px;
+            }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+            .faq-item:hover {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+        .faq-question {
+            font-size: 1.2rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            display: none;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #6cd1e8, #4e92fc);
+            color: #fff;
+        }
+
+            .cta h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .cta p {
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+            }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #4e92fc;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+            .cta-button:hover {
+                background: #dceeff;
+                color: #333;
+            }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <img src="logo.png" alt="Heal+ Logo" class="logo">
+        <nav>
+            <a href="HELLO.html">Home</a>
+           
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your All-in-One Healthcare Platform</h1>
+            <p>Explore the advanced features designed to simplify your practice and elevate patient care.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Features That Make a Difference</h2>
+
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>Seamless Online Booking</h3>
+                    <p>
+                        Let your patients book appointments with ease. Whether on mobile or desktop,
+                        our interface is built for convenience and speed.
+                    </p>
+                </div>
+                <div class="feature-image">
+                    <img src="onlinebooking.jpg" alt="Online Booking">
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item feature-reverse">
+                <div class="feature-image">
+                    <img src="reminder.jpg" alt="Automated Reminders">
+                </div>
+                <div class="feature-text">
+                    <h3>Automated Reminders</h3>
+                    <p>
+                        Forget no-shows! Our system sends automated SMS and email reminders to ensure
+                        everyone stays on track.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <img src="security.jpg" alt="Security Icon">
+                    <h3>Data Security</h3>
+                    <p>Top-tier encryption ensures patient data is safe and sound.</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="ease.jpg" alt="Ease of Use Icon">
+                    <h3>Ease of Use</h3>
+                    <p>Designed for doctors and patients with minimal learning curves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">How do I get started?</div>
+                <div class="faq-answer">Sign up and start exploring our intuitive platform!</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data secure?</div>
+                <div class="faq-answer">Absolutely! We use advanced encryption to protect your information.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Elevate Your Practice?</h2>
+            <p>Join thousands of healthcare professionals who trust our platform.</p>
+            <a href="doctor.html" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+</body>
+</html>

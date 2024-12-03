@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heal+ - Modern Healthcare Platform</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: #0056d6;
+            color: white;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            header nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            header .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+                color: white;
+            }
+
+            header ul {
+                list-style: none;
+                display: flex;
+                gap: 1.5em;
+                margin: 0;
+                padding: 0;
+            }
+
+                header ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 600;
+                    transition: color 0.3s ease;
+                }
+
+                    header ul li a:hover,
+                    header ul li a.active {
+                        color: #ff7e67;
+                    }
+
+        /* Main Content Styles */
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+            main h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1em;
+                color: #0056d6;
+            }
+
+            main p {
+                margin-bottom: 1.5em;
+                color: #555;
+            }
+
+            main ul {
+                list-style-type: disc;
+                margin-left: 2em;
+                color: #333;
+            }
+
+                main ul li {
+                    margin-bottom: 0.5em;
+                    font-size: 1.1rem;
+                }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #f1f1f1;
+            color: #333;
+            margin-top: 2em;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Buttons and Links */
+        button,
+        a {
+            transition: all 0.3s ease-in-out;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+            }
+
+            main {
+                padding: 1em;
+            }
+
+            header ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Heal+</a>
+            <ul>
+                <li><a href="#features" class="active">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Features Section -->
+        <section id="features">
+            <h1>Our Features</h1>
+            <p>At Heal+, we provide the following amazing features to simplify your healthcare journey:</p>
+            <ul>
+                <li>Easy appointment booking</li>
+                <li>Real-time doctor availability</li>
+                <li>Secure patient-doctor communication</li>
+                <li>Personalized reminders and notifications</li>
+                <li>Advanced search for specialists in your city</li>
+            </ul>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h1>About Heal+</h1>
+            <p>Heal+ is your trusted healthcare platform dedicated to connecting patients and doctors seamlessly. We believe in providing easy access to quality healthcare for everyone.</p>
+            <p>Our mission is to enhance the healthcare experience through innovation, accessibility, and trust. Whether you’re a patient looking for the right specialist or a doctor managing your appointments, Heal+ is here to help.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Have any questions or feedback? We’d love to hear from you! Use the contact details below to get in touch:</p>
+            <ul>
+                <li>Email: support@healplus.com</li>
+                <li>Phone: +1 234 567 890</li>
+                <li>Address: 123 Health Street, Wellness City</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heal+. All rights reserved.</p>
+    </footer>
+</body>
+</html>

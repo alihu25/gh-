@@ -1,0 +1,253 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration | Heal+</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f9ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #0056b3;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            header .logo {
+                display: flex;
+                align-items: center;
+            }
+
+                header .logo img {
+                    height: 40px;
+                    margin-right: 10px;
+                }
+
+                header .logo h1 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+            header nav {
+                display: flex;
+                gap: 20px;
+            }
+
+                header nav a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+                    header nav a:hover {
+                        text-decoration: underline;
+                    }
+
+        /* Form Section */
+        .form-section {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-section h2 {
+                text-align: center;
+                color: #0056b3;
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .form-section label {
+                display: block;
+                margin: 10px 0 5px;
+                font-size: 1rem;
+                color: #333;
+            }
+
+            .form-section input,
+            .form-section select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                font-size: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                transition: 0.3s ease;
+            }
+
+                .form-section input:focus,
+                .form-section select:focus {
+                    border-color: #0056b3;
+                    box-shadow: 0px 0px 6px rgba(0, 86, 179, 0.3);
+                    outline: none;
+                }
+
+            .form-section button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: #0056b3;
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s ease;
+                margin-top: 10px;
+            }
+
+                .form-section button:hover {
+                    background-color: #003f88;
+                }
+
+        /* Dynamic Message */
+        .dynamic-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #333;
+            animation: moveMessage 3s infinite ease-in-out;
+        }
+
+        @keyframes moveMessage {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0056b3;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            footer a {
+                color: #d4e8ff;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .map {
+            margin: 20px auto;
+            max-width: 800px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Heal+ Logo"> <!-- Replace 'logo.png' with the path to your logo -->
+            <h1>Heal+</h1>
+        </div>
+        <nav>
+            <a href="hello.html">Home</a>
+            <a href="us.html">Features</a>
+            <a href="onlinebooking.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Doctor Registration</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="city">City</label>
+            <select id="city" name="city" required>
+                <option value="">Select your city</option>
+                <option value="Baghdad">Baghdad</option>
+                <option value="Basra">Basra</option>
+                <option value="Erbil">Erbil</option>
+                <option value="Mosul">Mosul</option>
+                <option value="Najaf">Najaf</option>
+                <option value="Karbala">Karbala</option>
+                <option value="Sulaymaniyah">Sulaymaniyah</option>
+                <option value="Kirkuk">Kirkuk</option>
+                <option value="Duhok">Duhok</option>
+                <option value="Tikrit">Tikrit</option>
+            </select>
+
+            <label for="location">Exact Location</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Street Name, Building Number" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="specialty">Specialty</label>
+            <select id="specialty" name="specialty" required>
+                <option value="">Select your specialty</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Heart Surgeon">Heart Surgeon</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Orthopedic">Orthopedic</option>
+                <option value="Neurologist">Neurologist</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="dynamic-message">
+            <p>One of our employees will contact you soon to arrange a visit.</p>
+        </div>
+    </section>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27991476886!2d-74.25986668708903!3d40.69767006399695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245f56c3c1b21%3A0x6a7d3c4182d7bf9a!2sNew+York%2C+USA!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Heal+. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:support@healplus.com">support@healplus.com</a></p>
+        <p>Location: New York, USA</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heal+ | Simplified Healthcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #0056b3;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+            header img {
+                max-height: 50px;
+            }
+
+            header nav {
+                display: flex;
+                gap: 20px;
+            }
+
+                header nav a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: color 0.3s ease;
+                }
+
+                    header nav a:hover {
+                        color: #e6f0ff;
+                    }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #0056b3, #0078d4);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+            .hero h1 {
+                font-size: 5px;
+                font-size: 56px;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+                line-height: 1.6;
+            }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+            .form-container select,
+            .form-container button {
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+
+            .form-container button {
+                background-color: #0056b3;
+                color: #ffffff;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+            }
+
+                .form-container button:hover {
+                    background-color: #003a7a;
+                }
+
+        /* Footer */
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            footer a {
+                color: #e6f0ff;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Heal+ Logo">
+        <nav>
+            <a href="features.html">Features</a>
+            <a href="us.html">About</a>
+            <a href="footer.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Heal+</h1>
+        <p>Your trusted healthcare platform. Book appointments, manage schedules, and elevate patient care with ease.</p>
+
+        <div class="form-container">
+            <select id="location">
+                <option value="" disabled selected>Select your city</option>
+                <option value="Baghdad">Baghdad</option>
+                <option value="Basra">Basra</option>
+                <option value="mosul">mosul</option>
+                <option value="Karbala">Karbala</option>
+                <option value="Erbil">Erbil</option>
+                <option value="kirkuk">kirkuk</option>
+                <!-- Add more cities as needed -->
+            </select>
+
+            <select id="role">
+                <option value="" disabled selected>Are you a Doctor or Patient?</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Patient">Patient</option>
+            </select>
+
+            <button onclick="redirectToState()">Submit</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Heal+. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:qassem.smart@healplus.com">support@healplus.com</a></p>
+    </footer>
+
+    <script>
+        function redirectToState() {
+            const location = document.getElementById('location').value; // Get location value
+            const role = document.getElementById('role').value; // Get role value
+
+            // Check if both fields are selected
+            if (location && role) {
+                if (role === "Doctor") {
+                    // Redirect doctors to a static doctor page
+                    window.location.href = `doctor.html`;
+                } else if (role === "Patient") {
+                    // Redirect patients to a specific state page
+                    switch (location) {
+                        case "Baghdad":
+                            window.location.href = `baghdad.html`;
+                            break;
+                        case "Basra":
+                            window.location.href = `basra.html`;
+                            break;
+                        case "mosul":
+                            window.location.href = `mosul.html`;
+                            break;
+                        case "Karbala":
+                            window.location.href = `karbala.html`;
+                            break;
+                        case "Erbil":
+                            window.location.href = `erbil.html`;
+                            break;
+                        case "kirkuk":
+                            window.location.href = `kirkuk.html`;
+                            break;
+                        default:
+                            alert("Invalid state selected!");
+                    }
+                }
+            } else {
+                // Alert if either field is missing
+                alert("Please select both your location and role.");
+            }
+        }
+    </script>
+
+</body>
+</html>
